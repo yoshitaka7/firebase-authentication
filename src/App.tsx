@@ -4,11 +4,13 @@ import { AuthContext } from "./context/AuthContext";
 import { auth } from "./firebaseSetup";
 
 function App() {
-  const user = useContext(AuthContext);
+  const user = useContext(AuthContext);  //Providerから渡ってきたuser情報
 
+  //入力した値
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
+  //アカウント作成
   const createAccount = async () => {
     try {
       await auth.createUserWithEmailAndPassword(
@@ -20,6 +22,7 @@ function App() {
     }
   };
 
+  //サインイン
   const signIn = async () => {
     try {
       await auth.signInWithEmailAndPassword(
@@ -31,6 +34,7 @@ function App() {
     }
   };
 
+  //サインアウト
   const signOut = async () => {
     await auth.signOut();
   };
@@ -48,7 +52,7 @@ function App() {
               <Form.Label>Email</Form.Label>
               <Form.Control ref={emailRef} type="email" placeholder="email" />
             </Form.Group>
-            <Form.Group controlId="formPassword">
+            <Form.Group controlId="formPassword" style={{marginTop: "30px"}}>
               <Form.Label>Password</Form.Label>
               <Form.Control
                 ref={passwordRef}
@@ -56,7 +60,7 @@ function App() {
                 placeholder="password"
               />
             </Form.Group>
-            <Form>
+            <Form style={{marginTop: "30px", display: "flex"}}>
               <Col xs={6}>
                 <Button onClick={createAccount} type="button">
                   Sign Up

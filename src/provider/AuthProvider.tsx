@@ -6,13 +6,14 @@ import { auth } from "../firebaseSetup";
 export const AuthProvider: React.FC = ({ children }) => {
   const [user, setUser] = useState<firebase.User | null>(null);
 
+  //mount時
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((firebaseUser) => {
-      setUser(firebaseUser);
+    const unsubscribe = auth.onAuthStateChanged((firebaseUser) => {  //ログイン時
+      setUser(firebaseUser);  //stateにset
     });
 
     return unsubscribe;
   }, []);
 
-  return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>;  //user情報を子コンポーネントにわたす
 };
