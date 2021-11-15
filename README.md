@@ -1,9 +1,9 @@
-## firebase auth認証
+# firebase auth認証
 
-### ref
+## ref
  [https://medium.com/geekculture/firebase-auth-with-react-and-typescript-abeebcd7940a](https://medium.com/geekculture/firebase-auth-with-react-and-typescript-abeebcd7940a)
 
-### Getting Started
+## Getting Started
 `git clone`
 
 ↓
