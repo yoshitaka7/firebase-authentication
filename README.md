@@ -3,6 +3,7 @@
 ### ref
  [https://medium.com/geekculture/firebase-auth-with-react-and-typescript-abeebcd7940a](https://medium.com/geekculture/firebase-auth-with-react-and-typescript-abeebcd7940a)
 
+### Getting Started
 `git clone`
 
 ↓
