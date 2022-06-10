@@ -1,4 +1,4 @@
-# firebase auth認証
+# Firebase Authentication
 
 ## ref
  [https://medium.com/geekculture/firebase-auth-with-react-and-typescript-abeebcd7940a](https://medium.com/geekculture/firebase-auth-with-react-and-typescript-abeebcd7940a)
@@ -8,7 +8,7 @@
 
 ↓
 
-srcディテクトリ配下にfirebaseSetup.tsを作成
+create firebaseSetup.ts under src directory
 
 ↓
 
